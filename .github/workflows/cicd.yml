@@ -48,6 +48,7 @@ jobs :
               uses : docker/build-push-action@v4  
               with :
                 context : . # Path to the Dockerfile location
+                file : ./Dockerfile # Path to the Dockerfile
                 push : true
                 tags : ${{ secrets.DOCKERHUB_USERNAME }}/flask-app:latest  
 
